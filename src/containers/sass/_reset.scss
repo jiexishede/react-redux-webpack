@@ -1,0 +1,66 @@
+/* reset */
+html, body, div, span,
+h1, h2, h3, h4, h5, h6, p,
+a, em, img, strong,
+b, i, ol, ul, li,
+form, label, 
+article, section, aside, header, footer, nav,
+table, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+}
+img {
+    border: 0;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* tags style */
+html {
+    font-size: 100px;
+}
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: .14rem;
+    font-size: 14px;
+    color: #333;
+    line-height: 1.5;
+}
+a {
+    color: #1e6bb8;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    font-size: .36rem;
+}
+h2 {
+    font-size: .3rem;
+}
+h3 {
+    font-size: .24rem;
+}
+h4 {
+    font-size: .18rem;
+}
+h5 {
+    font-size: .16rem;
+}
+h6 {
+    font-size: .14rem;
+}
+
+table th,
+table td {
+    border: 1px solid #ddd;
+    padding: .06rem .12rem;
+}
+
+table tr:nth-child(even) {
+    background-color: #f8f8f8;
+}
