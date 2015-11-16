@@ -7,7 +7,7 @@ module.exports = {
     ],
     output: {
         path: './dist/',
-        filename: './scripts/bundle.js'
+        filename: './javascripts/bundle.js'
     },
     resolve: {
         extensions: ['', '.js']
@@ -15,15 +15,15 @@ module.exports = {
     module: {
         loaders: [
             {test: /\.jsx?$/, loader: 'babel'},
-            {test: /\.css$/, loader: ExtractTextPlugin.extract('style', 'css')},
-            {test: /\.less$/, loader: ExtractTextPlugin.extract('style', 'css!less')},
-            {test: /\.scss$/, loader: ExtractTextPlugin.extract('style', 'css!sass')},
-            {test: /\.(jpg|png|gif)$/, loader: 'file?name=./images/[name].[ext]'},
-            {test: /\.(svg|eot|ttf|woff2?)$/, loader: 'file?name=./fonts/[name].[ext]'},
+            {test: /\.css$/, loader: ExtractTextPlugin.extract('style', 'css!autoprefixer?{browsers:["last 2 version", "> 1%"]}')},
+            {test: /\.less$/, loader: ExtractTextPlugin.extract('style', 'css!autoprefixer?{browsers:["last 2 version", "> 1%"]}!less')},
+            {test: /\.scss$/, loader: ExtractTextPlugin.extract('style', 'css!autoprefixer?{browsers:["last 2 version", "> 1%"]}!sass')},
+            {test: /\.(jpg|png|gif)$/, loader: 'file?name=../images/[name].[ext]'},
+            {test: /\.(svg|eot|ttf|woff2?)$/, loader: 'file?name=../fonts/[name].[ext]'},
         ]
     },
     plugins: [
-        new webpack.optimize.CommonsChunkPlugin('./scripts/common.js'),
+        new webpack.optimize.CommonsChunkPlugin('./javascripts/common.js'),
         new ExtractTextPlugin('./stylesheets/style.css'),
         new webpack.optimize.UglifyJsPlugin({
             compress: {

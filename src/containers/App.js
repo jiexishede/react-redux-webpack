@@ -1,15 +1,22 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import Header from '../components/Header/';
 import { setCurrentPath } from '../actions/setCurrentPath';
-import './sass/index.scss';
+import Header from '../components/Header/';
+import Sidebar from '../components/Sidebar/';
+import Content from '../components/Content/';
+import Footer from '../components/Footer/';
 
 class App extends Component {
     render() {
         return (
-            <div className="as-main">
+            <div className="admin-main">
                 <Header />
+                <div className="admin-content-container">
+                    <Sidebar />
+                    <Content />
+                </div>
+                <Footer />
             </div>
         );
     }

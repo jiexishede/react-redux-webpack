@@ -1,0 +1,53 @@
+.admin-sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: $sidebar-width;
+    color: #eee;
+
+    .menu {
+        li a {
+            display: block;
+            color: #eee;
+            line-height: .4rem;
+            border-bottom: 1px solid #535353;
+            padding-left: .1rem;
+
+            &:hover {
+                text-decoration: none;
+            }
+
+            i {
+                color: #9c9c9c;
+                padding-right: .1rem;
+                font-size: .16rem;
+
+                &:last-child {
+                    float: right;
+                }
+            }
+        }
+
+        ul {
+            text-indent: .26rem;
+        }
+    }
+
+
+    .sub-menu {
+        border-bottom: 1px solid #535353;
+        padding: .1rem 0;
+        background-color: #444;
+
+        li a {
+            line-height: .3rem;
+            border: none;
+            color: #aaa;
+
+            &:hover {
+                background-color: #666;
+                color: #eee;
+            }
+        }
+    }
+}
