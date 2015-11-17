@@ -6,5 +6,10 @@
     position: relative;
     overflow: hidden;
     margin-top: $header-height;
-    background-color: $sidebar-bg;
+    background-color: $sidebar-nav-menu-bg;
+}
+.admin-content {
+    background-color: $content-bg;
+    margin-left: $sidebar-width;
+    min-height: $content-min-height;
 }

@@ -4,7 +4,13 @@ $header-bg: #2f2f2f;
 
 /* sidebar */
 $sidebar-width: 2.25rem;
-$sidebar-bg: #3d3d3d;
+$sidebar-nav-menu-bg: #2a3542;
+$sidebar-sub-menu-bg: #35404d;
+$sidebar-menu-color: #91979e;
+$sidebar-menu-color-active: #c25e5a;
+$sidebar-nav-menu-line-height: .4rem;
+$sidebar-sub-menu-line-height: .3rem;
 
 /* content */
 $content-bg: #f2f2f2;
+$content-min-height: 6rem;

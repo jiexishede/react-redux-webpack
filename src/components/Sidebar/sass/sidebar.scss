@@ -3,22 +3,24 @@
     top: 0;
     left: 0;
     width: $sidebar-width;
-    color: #eee;
 
-    .menu {
+    .nav-menu {
         li a {
             display: block;
-            color: #eee;
-            line-height: .4rem;
-            border-bottom: 1px solid #535353;
+            color: $sidebar-menu-color;
+            line-height: $sidebar-nav-menu-line-height;
             padding-left: .1rem;
 
-            &:hover {
+            &:hover,
+            &.active {
                 text-decoration: none;
+
+                i:first-child {
+                    color: $sidebar-menu-color-active;
+                }
             }
 
             i {
-                color: #9c9c9c;
                 padding-right: .1rem;
                 font-size: .16rem;
 
@@ -29,24 +31,18 @@
         }
 
         ul {
-            text-indent: .26rem;
+            padding-left: .26rem;
+            background-color: $sidebar-sub-menu-bg;
         }
     }
 
-
     .sub-menu {
-        border-bottom: 1px solid #535353;
-        padding: .1rem 0;
-        background-color: #444;
-
         li a {
-            line-height: .3rem;
-            border: none;
-            color: #aaa;
+            line-height: $sidebar-sub-menu-line-height;
 
-            &:hover {
-                background-color: #666;
-                color: #eee;
+            &:hover,
+            &.active {
+                color: $sidebar-menu-color-active;
             }
         }
     }
