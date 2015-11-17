@@ -8,15 +8,15 @@ import Footer from '../components/Footer/';
 
 class App extends Component {
     render() {
+        let { currentPath, setCurrentPath } = this.props;
+
         return (
             <div className="admin-main">
                 <Header />
-                <div className="admin-content-container">
-                    <Sidebar />
-                    <section className="admin-content">
-                        {this.props.children || ''}
-                    </section>
-                </div>
+                <Sidebar currentPath={currentPath} setCurrentPath={setCurrentPath} />
+                <section className="admin-content">
+                    {this.props.children || ''}
+                </section>
                 <Footer />
             </div>
         );
@@ -25,7 +25,7 @@ class App extends Component {
 
 function mapStateToProps(state) {
     return {
-        currentPath: state.currentPath
+        ...state
     };
 }
 

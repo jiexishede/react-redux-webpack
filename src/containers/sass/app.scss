@@ -2,12 +2,6 @@
     position: relative;
     overflow: hidden;
 }
-.admin-content-container {
-    position: relative;
-    overflow: hidden;
-    margin-top: $header-height;
-    background-color: $sidebar-nav-menu-bg;
-}
 .admin-content {
     background-color: $content-bg;
     margin-left: $sidebar-width;

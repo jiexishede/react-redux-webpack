@@ -1,20 +1,29 @@
 import React, { Component, PropTypes } from 'react';
 import SubMenu from './SubMenu';
-import config from './config';console.log(config);
+import config from './config';
 
 class NavMenu extends Component {
+    
+    
     render() {
         return (
             <ul className="nav-menu">
-                {config.map((nav, i) => {
+                <li>
+                    <a href={config.home.path}>
+                        <i className={'iconfont ' + config.home.icon}></i>
+                        {config.home.text}
+                    </a>
+                </li>
+
+                {config.menus.map((menu, i) => {
                     return (
                         <li key={i}>
-                            <a href="javascript;">
-                                <i className={'iconfont ' + nav.icon}></i>
-                                {nav.text}
+                            <a href="javascript:;">
+                                <i className={'iconfont ' + menu.icon}></i>
+                                {menu.text}
                                 <i className="iconfont icon-angleleft"></i>
                             </a>
-                            <SubMenu items={nav.items} />
+                            <SubMenu items={menu.items} />
                         </li>
                     );
                 })}
