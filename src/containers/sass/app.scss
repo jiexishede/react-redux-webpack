@@ -4,6 +4,6 @@
 }
 .admin-content {
     background-color: $content-bg;
-    margin-left: $sidebar-width;
+    margin: $header-height 0 0 $sidebar-width;
     min-height: $content-min-height;
 }
