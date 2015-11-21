@@ -1,3 +1,3 @@
-# web-admin
+# react-redux-webpack
 
-react搭建网站后台管理
+react+redux+webpack搭建基本开发环境
